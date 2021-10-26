@@ -11,3 +11,12 @@ int main(void)
      printf("%d:\t\t\%.5Lf\t\t\t%.5Lf\t\t\t%.5Lf\n", i, (1.0 / i), log10(i), sin(i / (20 * 2 * M_PI)));
 }
 
+/*
+
+całkowte od 1...6 
+int losowa = 1+(rand % 6);
+
+rzeczywiste od 0....5
+double liczba = 5*(static_cast<double>(rand())/RAND_MAX)
+
+*/
