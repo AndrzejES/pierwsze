@@ -1,0 +1,23 @@
+void sortowanie_szybkie(int* tablica, int rozmiar, int d, int g)
+{
+    if (d < g)
+    {
+        int t = tablica[d];
+        int s = d;
+        for (int i = d + 1; i <= g; i++)
+        {
+            if (tablica[i] < t)
+            {
+                s = s + 1;
+                swap(tablica[s], tablica[i]);
+            }
+        }
+        swap(tablica[d], tablica[s]);
+        sortowanie_szybkie(tablica,rozmiar,d,s-1);
+        sortowanie_szybkie(tablica,rozmiar,s+1,g);
+    }
+}
+void szybkie_sortowanie(int* tablica, int rozmiar)
+{
+    sortowanie_szybkie(tablica,rozmiar,0,rozmiar-1);
+}
